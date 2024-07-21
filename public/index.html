@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FigurineShare - Partagez vos figurines de collection</title>
+    <meta name="description" content="Échangez, partagez et découvrez des figurines de collection uniques sur FigurineShare. Rejoignez notre communauté de passionnés dès aujourd'hui !">
+    <link rel="stylesheet" href="src/css/style.css">
+    <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-analytics-compat.js"></script>
+</head>
+<body> 
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">Accueil</a></li>
+                <li><a href="#">Catalogue</a></li>
+                <li><a href="#">Annonces</a></li>
+                <li><a href="#">Espace Membre</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Bienvenue sur FigurineShare</h1>
+        <p>Découvrez, échangez et partagez vos figurines de collection préférées !</p>
+        
+        <section id="featured-figurines">
+            <h2>Figurines à la une</h2>
+            <!-- Les figurines seront ajoutées dynamiquement ici -->
+        </section>
+
+        <section id="recent-announcements">
+            <h2>Annonces récentes</h2>
+            <!-- Les annonces seront ajoutées dynamiquement ici -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 FigurineShare. Tous droits réservés.</p>
+    </footer>
+
+    <script src="src/js/firebase-config.js"></script>
+    <script src="src/js/app.js"></script>
+    <script src="src/js/load-header.js"></script>
+    <script src="src/js/load-footer.js"></script>
+</body>
+</html>

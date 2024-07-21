@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulaire d'Ajout de Figurine</title>
+</head>
+<body>
+  <h1>Formulaire d'ajout de Figurine</h1>
+  <form id="figurineForm">
+    <label for="marque">Marque:</label>
+    <select id="marque" name="marque" required></select>
+ 
+    <label for="serie">Série:</label>
+    <select id="serie" name="serie" required></select>
+
+    <label for="modele">Modèle:</label>
+    <select id="modele" name="modele" required></select>
+
+    <label for="nomPersonnage">Nom du personnage:</label>
+    <input type="text" id="nomPersonnage" name="nomPersonnage" required>
+
+    <label for="codeBarre">Code barre:</label>
+    <input type="text" id="codeBarre" name="codeBarre" pattern="\d+" required>
+
+    <label for="edition">Édition:</label>
+    <input type="text" id="edition" name="edition" required>
+
+    <label for="annee">Année:</label>
+    <select id="annee" name="annee"></select>
+
+    <label for="materiau">Matériau principal:</label>
+    <select id="materiau" name="materiau" required>
+      <option value="PVC">PVC</option>
+      <option value="Vinyle">Vinyle</option>
+      <option value="Sofubi">Sofubi</option>
+      <option value="ABS">ABS</option>
+      <option value="Résine PU">Résine PU</option>
+      <option value="PVC/ABS">PVC/ABS</option>
+    </select>
+
+    <label for="imagePrincipale">Image principale:</label>
+    <input type="file" id="imagePrincipale" name="imagePrincipale" accept="image/*" required>
+
+    <label for="images">Images (facultatif):</label>
+    <input type="file" id="images" name="images" accept="image/*" multiple>
+
+    <button type="submit">Soumettre</button>
+  </form>
+    <script type="module" src="../js/load-header.js"></script>
+    <script type="module" src="../js/formulaire-figurine.js"></script>
+    <script type="module" src="../js/load-footer.js"></script>
+
+
+</body>
+</html>

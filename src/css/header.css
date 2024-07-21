@@ -1,0 +1,141 @@
+/* Styles généraux pour le header */
+.site-header {
+    background-color: #3498db; /* Couleur principale */
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    color: white;
+    position: relative;
+} 
+
+.site-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Logo */
+.logo img {
+    display: block;
+}
+
+/* Navigation principale */
+.main-nav {
+    display: flex;
+    flex-grow: 1;
+    margin: 0 2rem;
+}
+
+.main-nav ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.main-nav li {
+    margin: 0;
+}
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.5rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.main-nav a:hover, .main-nav a:focus {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ecf0f1;
+}
+
+/* Actions utilisateur */
+.user-actions {
+    display: flex;
+    align-items: center;
+}
+
+.btn-login, .btn-signup {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    font-weight: 600;
+}
+
+.btn-login {
+    background-color: transparent;
+    border: 1px solid white;
+    margin-right: 1rem;
+}
+
+.btn-login:hover, .btn-login:focus {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.btn-signup {
+    background-color: #2ecc71;
+}
+
+.btn-signup:hover, .btn-signup:focus {
+    background-color: #27ae60;
+}
+
+/* Menu mobile */
+.menu-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.menu-icon::before {
+    content: "☰"; /* Icône de menu */
+}
+
+/* Responsivité */
+@media (max-width: 768px) {
+    .site-header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .main-nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin: 1rem 0;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .main-nav li {
+        margin: 0;
+    }
+
+    .user-actions {
+        margin-top: 1rem;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu-toggle.active + .main-nav {
+        display: flex;
+    }
+}
